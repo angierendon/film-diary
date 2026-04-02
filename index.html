@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Film Diary</title>
+
+  <!-- Google Fonts: Special Elite for the film/typewriter feel, Lato for body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+
+  <!-- Link to our external stylesheet -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════
+       INTRO / TITLE PAGE
+       This is the first thing the visitor sees.
+       Clicking the button runs showGallery() in script.js.
+  ══════════════════════════════ -->
+  <section class="page active" id="intro-page">
+
+  <!-- Decorative stickers scattered around the page -->
+
+  <!-- Camera - top right -->
+  <div class="sticker cam1">
+    <svg width="60" height="46" viewBox="0 0 60 46">
+      <rect x="4" y="10" width="52" height="30" rx="5" fill="#c9a87c" stroke="#8b6040" stroke-width="1.5"/>
+      <rect x="0" y="17" width="7" height="10" rx="2" fill="#b5813e"/>
+      <rect x="18" y="4" width="24" height="10" rx="3" fill="#c9a87c" stroke="#8b6040" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="10" fill="#f5efe2" stroke="#8b6040" stroke-width="1.5"/>
+      <circle cx="30" cy="25" r="6" fill="#d9cbb8" stroke="#8b6040" stroke-width="1"/>
+      <circle cx="30" cy="25" r="3" fill="#8b6040"/>
+      <circle cx="46" cy="16" r="3" fill="#b5813e"/>
+    </svg>
+  </div>
+
+  <!-- Camera - bottom left -->
+  <div class="sticker cam2">
+    <svg width="50" height="38" viewBox="0 0 50 38">
+      <rect x="3" y="8" width="44" height="26" rx="4" fill="#d9cbb8" stroke="#9e8878" stroke-width="1.5"/>
+      <rect x="15" y="3" width="20" height="9" rx="3" fill="#d9cbb8" stroke="#9e8878" stroke-width="1.5"/>
+      <circle cx="25" cy="21" r="8" fill="#f5efe2" stroke="#9e8878" stroke-width="1.2"/>
+      <circle cx="25" cy="21" r="5" fill="#c9b89a" stroke="#9e8878" stroke-width="1"/>
+      <circle cx="25" cy="21" r="2.5" fill="#8b6040"/>
+      <rect x="0" y="14" width="6" height="8" rx="2" fill="#c9a87c"/>
+    </svg>
+  </div>
+
+  <!-- 4-point star - top left -->
+  <div class="sticker star1">
+    <svg width="40" height="40" viewBox="0 0 40 40">
+      <path d="M20 2 L23 17 L38 20 L23 23 L20 38 L17 23 L2 20 L17 17 Z" fill="#b5813e" stroke="#8b6040" stroke-width="0.8"/>
+    </svg>
+  </div>
+
+  <!-- Outlined star - bottom right -->
+  <div class="sticker star2">
+    <svg width="32" height="32" viewBox="0 0 32 32">
+      <path d="M16 2 L18.5 13 L29 16 L18.5 19 L16 30 L13.5 19 L3 16 L13.5 13 Z" fill="none" stroke="#b5813e" stroke-width="1.8"/>
+      <circle cx="16" cy="16" r="2.5" fill="#b5813e"/>
+    </svg>
+  </div>
+
+  <!-- Filled sun - left middle -->
+  <div class="sticker sun1">
+    <svg width="38" height="38" viewBox="0 0 38 38">
+      <circle cx="19" cy="19" r="8" fill="#b5813e"/>
+      <line x1="19" y1="2" x2="19" y2="8" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="19" y1="30" x2="19" y2="36" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="2" y1="19" x2="8" y2="19" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="30" y1="19" x2="36" y2="19" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="6" y1="6" x2="10.5" y2="10.5" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="27.5" y1="27.5" x2="32" y2="32" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="32" y1="6" x2="27.5" y2="10.5" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="10.5" y1="27.5" x2="6" y2="32" stroke="#b5813e" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Outlined sun - top center -->
+  <div class="sticker sun2">
+    <svg width="30" height="30" viewBox="0 0 30 30">
+      <circle cx="15" cy="15" r="6" fill="none" stroke="#c9a87c" stroke-width="1.8"/>
+      <line x1="15" y1="1" x2="15" y2="6" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="15" y1="24" x2="15" y2="29" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="1" y1="15" x2="6" y2="15" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="24" y1="15" x2="29" y2="15" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4" y1="4" x2="8" y2="8" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="22" y1="22" x2="26" y2="26" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="26" y1="4" x2="22" y2="8" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="8" y1="22" x2="4" y2="26" stroke="#c9a87c" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Tiny star - bottom center -->
+  <div class="sticker star3">
+    <svg width="24" height="24" viewBox="0 0 24 24">
+      <path d="M12 1 L14 9 L22 12 L14 15 L12 23 L10 15 L2 12 L10 9 Z" fill="#d9cbb8" stroke="#b5813e" stroke-width="1.2"/>
+    </svg>
+  </div>
+
+  <!-- Main content grid -->
+  <div class="cover-grid">
+
+    <!-- LEFT: text -->
+    <div class="cover-left">
+    
+      <h1 class="intro-title">My Film <br><span>Diary</span></h1>
+      <div class="intro-divider"></div>
+      <p class="intro-bio">
+        Hi, I'm <strong>Angie</strong> — an aspiring urban planner with a love for film photography. I started shooting film in high school on cheap disposable cameras. Over the years it's become my outlet for creative expression, capturing moments from my travels and everyday life.
+        <br><br>
+        This is a small collection of some of my favorite photos over the last few years that capture key moments in my life.
+      </p>
+      <div class="intro-icons">
+        <span>35mm</span><span class="dot-sep">·</span>
+        <span>Analog</span><span class="dot-sep">·</span>
+        <span>Travel</span>
+      </div>
+      <button class="enter-btn" onclick="showGallery()">View the Gallery →</button>
+    </div>
+
+    <!-- RIGHT: tilted film strip with 3 photos -->
+    <div class="cover-right">
+      <div class="film-strip-vertical">
+        <div class="vsf-holes"><span></span><span></span><span></span><span></span></div>
+        <div class="vsf-frame-num">01</div>
+        <div class="vsf-photo">
+          <!-- film strip photos -->
+          <img src="images/IMG_2572.jpeg" alt="photo 1"/>
+        </div>
+        <div class="vsf-holes"><span></span><span></span><span></span><span></span></div>
+        <div class="vsf-frame-num">02</div>
+        <div class="vsf-photo">
+          <img src="images/IMG_2575.jpeg" alt="photo 2"/>
+        </div>
+        <div class="vsf-holes"><span></span><span></span><span></span><span></span></div>
+        <div class="vsf-frame-num">03</div>
+        <div class="vsf-photo">
+          <img src="images/IMG_2576.jpeg" alt="photo 3"/>
+        </div>
+        <div class="vsf-holes"><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- ══════════════════════════════
+       GALLERY PAGE
+       Hidden by default. Shown when the user clicks "View the Gallery".
+       Contains the slideshow with all photos.
+  ══════════════════════════════ -->
+  <section class="page" id="gallery-page">
+
+    <!-- Button to go back to the intro page — calls showIntro() in script.js -->
+    <button class="back-link" onclick="showIntro()">← Back to intro</button>
+
+    <!-- Gallery title section -->
+    <div class="gallery-header">
+      <h1>My Film Diary</h1>
+      <p>35mm · Life on Camera</p>
+    </div>
+
+    <!-- Slideshow wrapper — contains the film strips, slides, and navigation -->
+    <div class="slideshow-wrapper">
+
+      <!-- Top film strip decoration — holes are generated by script.js -->
+      <div class="film-strip" id="stripTop"></div>
+
+      <!-- ── SLIDE 1 ── -->
+      <div class="slide active"> <!-- "active" makes this the visible slide on load -->
+        <div class="photo-frame">
+          <!-- Photo -->
+          <img src="images/000748900015 copy.jpg" alt="Brooklyn"/>
+          <!-- Caption overlay — slides up on hover -->
+          <div class="caption-overlay">
+            <span class="location">Brooklyn</span>
+            <span class="film-note">Spring 2021</span>
+            <p class="description">
+              When I moved to NYC for college in 2021, it was a diffuclt and lonely time because of COVID. Walking around and taking photos helped my mental health. I took to the streets with a cheap point-and-shoot that I bought on ebay. Not great quality, but I was discovering my love for photography here!
+            </p>
+          </div>
+        </div>
+        <!-- Film info bar below the photo -->
+        <div class="film-info">
+          <span>KODAK PORTRA 400</span>
+          <span class="frame-number">01</span>
+          <span>ISO 400 ▸ 35mm</span>
+        </div>
+      </div>
+
+      <!-- ── SLIDE 2 ── -->
+      <div class="slide">
+        <div class="photo-frame">
+          <img src="images/000071460027 copy.jpg" alt="Los Angeles"/>
+          <div class="caption-overlay">
+            <span class="location">Los Angeles</span>
+            <span class="film-note">Summer 2023</span>
+            <p class="description">
+              During college, I bought a more sophisticated camera and started to capture higher quality images. I was lucky enough to make an amazing friend group, and we got to take a trip together. I finally felt happy and well-adjusted.
+            </p>
+          </div>
+        </div>
+        <div class="film-info">
+          <span>ILFORD HP5</span>
+          <span class="frame-number">02</span>
+          <span>ISO 400 ▸ 35mm</span>
+        </div>
+      </div>
+
+      <!-- ── SLIDE 3 ── -->
+      <div class="slide">
+        <div class="photo-frame">
+          <img src="images/000071120008 copy.jpg" alt="Miami"/>
+          <div class="caption-overlay">
+            <span class="location">Miami</span>
+            <span class="film-note">Summer 2024</span>
+            <p class="description">
+              After I graduated college, I went back home for a while. I was really bored and lonely in my suburban Florida neighborhood; I missed my friends and the excitment of living in New York. But I used photography to find joy in the small things around me, and it helped me appreciate this transition period more.
+            </p>
+          </div>
+        </div>
+        <div class="film-info">
+          <span>FUJI SUPERIA 400</span>
+          <span class="frame-number">03</span>
+          <span>ISO 400 ▸ 35mm</span>
+        </div>
+      </div>
+
+      <!-- ── SLIDE 4 ── -->
+      <div class="slide">
+        <div class="photo-frame">
+          <img src="images/002287670013 copy 2.jpg" alt="Upper East Side"/>
+          <div class="caption-overlay">
+            <span class="location">Upper East Side</span>
+            <span class="film-note">Winter 2026</span>
+            <p class="description">
+              Now, I'm in grad school, back in New York City, and living in the cutest apartment with my best friends from college. I live 15 minutes away from Central Park, where I played in the snow and took photos after the snowstorm in January. I don't know what life will look like after graduating, but right now I'm happy.
+            </p>
+          </div>
+        </div>
+        <div class="film-info">
+          <span>KODAK EKTAR 100</span>
+          <span class="frame-number">04</span>
+          <span>ISO 100 ▸ 35mm</span>
+        </div>
+      </div>
+
+      <!-- Bottom film strip decoration — holes generated by script.js -->
+      <div class="film-strip" id="stripBottom"></div>
+
+      <!-- Prev / Next navigation and dot indicators -->
+      <nav class="nav">
+        <!-- Prev button is disabled on load since we start at slide 1 -->
+        <button id="prevBtn" onclick="changeSlide(-1)" disabled>← PREV</button>
+        <!-- Dots are generated dynamically by script.js -->
+        <div class="dots" id="dots"></div>
+        <button id="nextBtn" onclick="changeSlide(1)">NEXT →</button>
+      </nav>
+
+      <!-- Small hint text below the navigation -->
+      <p class="hint">hover over photo to reveal location &amp; story</p>
+
+    </div><!-- end .slideshow-wrapper -->
+
+  </section><!-- end #gallery-page -->
+
+
+  <!-- Link to our external JavaScript file — placed at the bottom so the HTML loads first -->
+  <script src="script.js"></script>
+
+</body>
+</html>
